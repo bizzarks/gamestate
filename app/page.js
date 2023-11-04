@@ -1,10 +1,18 @@
-import Image from 'next/image'
 import styles from './page.module.css'
+
+import PlayerLife from './player.js'
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
+      <div className={styles.grid2x2}>
+        <PlayerLife name='Shaun' lifeTotal='40' />
+        <PlayerLife name='Taylor' lifeTotal='40' />
+        <PlayerLife name='Seth' lifeTotal='40' />
+        <PlayerLife name='Brandon' lifeTotal='40' />
+      </div>
+
+      {/* <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>app/page.js</code>
@@ -15,28 +23,12 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
+            By{'SCREEEEEEECH'}
           </a>
         </div>
       </div>
 
       <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
       </div>
 
       <div className={styles.grid}>
@@ -89,7 +81,7 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
+    </div> */}
     </main>
   )
 }
