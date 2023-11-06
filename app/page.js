@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.grid2x2}>
-        <PlayerLife name='Shaun' lifeTotal='40' />
-        <PlayerLife name='Taylor' lifeTotal='40' />
-        <PlayerLife name='Seth' lifeTotal='40' />
-        <PlayerLife name='Brandon' lifeTotal='40' />
+        <PlayerLife name='Player 1' inverted='true' lifeTotal='40' />
+        <PlayerLife name='Player 2' inverted='true' lifeTotal='40' />
+        <PlayerLife name='Player 3' lifeTotal='40' />
+        <PlayerLife name='Player 4' lifeTotal='40' />
       </div>
 
       {/* <div className={styles.description}>

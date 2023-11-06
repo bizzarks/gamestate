@@ -8,14 +8,14 @@
 
 .grid2x2 {
     margin: 20px auto;
-    width: 600px;
-    height: 600px;
+    width: 80%;
+    height: 80%;
     background-color: #fff;
     display: grid;
-    grid-template-columns: 300px 300px;
+    grid-template-columns: 50% 50%;
     grid-row: auto auto;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
 
 .plife {
@@ -35,6 +35,13 @@
     font-size: 80px;
 }
 
+.p_life_total_inverted {
+    align-self: center;
+    justify-self: center;
+    font-size: 80px;
+    transform: rotate(180deg);
+}
+
 .player_name {
     background-color: #f6efef;
     text-align: center;
@@ -48,6 +55,24 @@
     max-width: 100%;
     font-size: 14px;
     font-family: sans-serif;
+}
+
+.player_name_inverted {
+    background-color: #f6efef;
+    text-align: center;
+    padding: 2px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    color: #202020;
+    position: relative;
+    align-self:end;
+    top: 2px;
+    left: 2px;
+    height: 20px;
+    max-width: 100%;
+    font-size: 14px;
+    font-family: sans-serif;
+    transform:rotate(180deg);
 }
 
 .player_name_blank {
