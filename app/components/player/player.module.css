@@ -1,0 +1,50 @@
+.plife {
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    display: grid;
+    font-size: 60px;
+    font-family: sans-serif;
+}
+
+.plife_inverted {
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    display: grid;
+    font-size: 60px;
+    font-family: sans-serif;
+    transform: rotate(180deg);
+}
+
+.p_life_total {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.5em;
+    min-height: 80px;
+
+}
+
+.p_life_total p {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.player_name {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    height: 30%;
+    max-width: 100%;
+    font-size: 20px;
+    font-family: sans-serif;
+}

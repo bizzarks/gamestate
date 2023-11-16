@@ -1,6 +1,6 @@
 import styles from './page.module.css'
 
-import PlayerLife from './player.js'
+import PlayerLife from '../components/player/player.js'
 
 export default function Home() {
   return (
