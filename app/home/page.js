@@ -1,87 +1,21 @@
 import styles from './page.module.css'
 
 import PlayerLife from '../components/player/player.js'
+import generateDefaultPlayerStates from '../../public/gamestate.js'
 
 export default function Home() {
+
+  let gamestate = generateDefaultPlayerStates()
+
   return (
     <main className={styles.main}>
       <div className={styles.grid2x2}>
-        <PlayerLife name='Player 1' inverted='true' lifeTotal='40' />
-        <PlayerLife name='Player 2' inverted='true' lifeTotal='40' />
-        <PlayerLife name='Player 3' lifeTotal='40' />
-        <PlayerLife name='Player 4' lifeTotal='40' />
+        {
+          gamestate.playerStates.map((g) => (
+            < PlayerLife key={g.id} name={g.name} lifeTotal={g.life} inverted={g.id <= 2 ? true : false} props={g} />
+          ))
+        }
       </div>
-
-      {/* <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{'SCREEEEEEECH'}
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-    </div> */}
     </main>
   )
 }
